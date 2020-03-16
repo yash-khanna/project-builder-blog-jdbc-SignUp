@@ -72,7 +72,7 @@ Download ojdbc6.jar from the given link [https://www.oracle.com/database/technol
 3. Pass the User as argument to the signUp method.
 4. Call the signUp method and store the return value in a integer value called checkUser.
 
-## Progression 4:
+## Progression 5:
 1. Go to the controller class LoginController inside the src/controller package.
 2. Create object for the model class User and for the dao class UserDAO.
 3. Pass the User as argument to the loginUser.
