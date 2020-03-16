@@ -50,13 +50,30 @@ Download ojdbc6.jar from the given link [https://www.oracle.com/database/technol
 2. **Create a interface called UserDaoInterface with the following methods.**
 	- **int signUp(User user)**
 	- **boolean loginUser(User user)**
+3. **UserDAO should implement the UserDaoInterface.**
+4. **The signUp method is used to insert User details in the database.**
+5. **The loginUser method checks whether the user exists int the database or not.**
 
 
 ## Progression 3:
-1. **Go to src controller - SignUpController.**
-2. **Inside the doGet method create an object for the Connection { java.sql.Connection }.**
-3. **Call the getConnection() method in the ConnectionManager and store the return value in the Connection object.**
-4. **Display "Connection established" if the connection is not equal to null else display "Check your connection".**
+1. **Create a model class called User with the following parameters.**
+	- **private String email**
+	- **private String password**	
+	- **private LocalDate date**
+2. **Include appropriate getters and setters.**
+
+## Progression 4:
+1. **Go to the controller class SignUpController inside the src/controller package.**
+2. **Create object for the model class User and for the dao class UserDAO.**
+3. **Pass the User as argument to the signUp method.**
+4. **Call the signUp method and store the return value in a integer value called checkUser.**
+
+## Progression 4:
+1. **Go to the controller class LoginController inside the src/controller package.**
+2. **Create object for the model class User and for the dao class UserDAO.**
+3. **Pass the User as argument to the loginUser.**
+4. **Call the loginUser method and store the return value in a boolean value called validateUser.**
+
 
 ### Note:
 
