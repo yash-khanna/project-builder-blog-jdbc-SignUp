@@ -28,6 +28,7 @@ And finally, create a pull request so your ProGrad Mentor (PM) can review your w
 3. ***Go to Java Resources -> src folder.***
 4. ***Your database connection code should exist inside the utlity package.***
 5. ***Your crud operations should go inside the dao package.***
+7. ***Create the connection object in the controller and call the respective methods.***
 6. ***Once the progressions are completed follow the instructions to run the application and test your code.***
 7. ***Add appropriate jars to your project directory.***
 
@@ -45,6 +46,13 @@ Download ojdbc6.jar from the given link [https://www.oracle.com/database/technol
 3. **Use the method public static Properties loadPropertiesFile() to load the jdbc properties from the jdbc.properties file.**
 
 ## Progression 2:
+1. **Create a class called as UserDAO inside the dao package.**
+2. **Create a interface called UserDaoInterface with the following methods.**
+	- **int signUp(User user)**
+	- **boolean loginUser(User user)**
+
+
+## Progression 3:
 1. **Go to src controller - SignUpController.**
 2. **Inside the doGet method create an object for the Connection { java.sql.Connection }.**
 3. **Call the getConnection() method in the ConnectionManager and store the return value in the Connection object.**
