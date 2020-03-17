@@ -25,16 +25,7 @@ public class SignUpController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		System.out.println("Sign up Controller");
-//		Connection con=null;
-//		con=ConnectionManager.getConnection();
-//		if(con!=null) {
-//			System.out.println("Database connection established");
-//		}
-//		else
-//		{
-//			System.out.println("Check your connection");
-//		}
+
 		RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/signupView.jsp");
 		rd.forward(request,response);
 	}
@@ -47,12 +38,10 @@ public class SignUpController extends HttpServlet {
 		String password = request.getParameter("password"); //  get the password value from the jsp/html page
 		String confirmPassword = request.getParameter("confirmPassword"); //  get the confirm password value from the jsp/html page
 		LocalDate date= LocalDate.now(); // Java 8 Time API used to get system date and time at a particular instance
-		User user=new User();
-		user.setEmail(email);
-		user.setPassword(password);
-		UserDAO userdao=new UserDAO();
-		user.setDate(date);
-		int checkUser = userdao.signUp(user);
+		
+		// Fill your code here
+		
+		
 		if(checkUser!=0)
 		{
 						
