@@ -1,7 +1,8 @@
 package controller;
 
 import java.io.IOException;
-import java.time.LocalDate;
+
+import java.sql.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -37,9 +38,12 @@ public class SignUpController extends HttpServlet {
 			String email = request.getParameter("email"); //  get the email value from the jsp/html page
 		String password = request.getParameter("password"); //  get the password value from the jsp/html page
 		String confirmPassword = request.getParameter("confirmPassword"); //  get the confirm password value from the jsp/html page
-		LocalDate date= LocalDate.now(); // Java 8 Time API used to get system date and time at a particular instance
+		Date date= new Date(2020,12,12); // Java 8 Time API used to get system date and time at a particular instance
 		
 		// Fill your code here
+		User user=new User(email,password,date);
+		UserDAO userdao=new UserDAO();
+		int checkUser=userdao.signUp(user);
 		
 		
 		if(checkUser!=0)
